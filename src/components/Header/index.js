@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Grid } from 'semantic-ui-react'
+import axios from 'axios'
 
 const styles = {
   content: {
@@ -43,5 +44,21 @@ export default class Header extends Component {
         </Grid.Column>
       </Grid>
     )
+  }
+  componentWillMount() {
+    this.getData();
+  }
+  getData() {
+    const config = {
+      headers: {'Content-Type': 'application/json'}
+    }
+    axios.get('https://chasing-coins.com/api/v1/std/marketcap/', config)
+      .then(function (response) {
+        console.log(response)
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
   }
 }
