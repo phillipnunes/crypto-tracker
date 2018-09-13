@@ -4,15 +4,6 @@ import React, { Component } from 'react'
 import { Table } from 'semantic-ui-react'
 import axios from 'axios'
 
-const tableData = [
-  { name: 'John', market_cap: '$109,321,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-  { name: 'John', market_cap: '$109,321,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-  { name: 'John', market_cap: '$109,31,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-  { name: 'John', market_cap: '$109,321,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-  { name: 'John', market_cap: '$109,321,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-  { name: 'John', market_cap: '$19,321,942,886', usd: '$6,332.94,238,125', day_volume: '$1,564,967,621.6', hour_percent: '0.03%', day_percent: '0.03%', week_percent: '0.03%' },
-]
-
 export default class List extends Component {
   state = {
     column: null,

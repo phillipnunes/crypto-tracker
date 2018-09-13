@@ -57,13 +57,16 @@ export default class Header extends Component {
 
     return { last_day, last_hour }
   }
+  numberWithCommas = x => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
   render() {
     return (
       <Grid>
         <Grid.Column mobile={16} computer={4}>
           <div style={styles.content}>
             <span>Market Cap: </span>
-            <span style={styles.colors.blueBold}>${this.state.market_cap}</span>
+            <span style={styles.colors.blueBold}>${this.numberWithCommas(this.state.market_cap)}</span>
           </div>
         </Grid.Column>
         <Grid.Column mobile={16} computer={4}>
