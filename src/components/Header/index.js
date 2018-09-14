@@ -39,7 +39,7 @@ export default class Header extends Component {
         })
       })
       .catch(function (error) {
-        console.log(error);
+        console.log(error)
       })
   }
   filterValues(values) {
@@ -58,7 +58,7 @@ export default class Header extends Component {
     return { last_day, last_hour }
   }
   numberWithCommas = x => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   }
   render() {
     return (
